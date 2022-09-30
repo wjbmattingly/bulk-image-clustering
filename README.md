@@ -1,0 +1,39 @@
+# USHMM Image Clustering
+
+# About
+This repository is built upon the work of [Vincent D. Warmerdam](https://github.com/koaning), specifically his [bulk](https://github.com/koaning/bulk) Python library.
+
+The repository allows for you to leverage DocArray to grab all images from a directory. DocArray wraps around [timm](https://pypi.org/project/timm/) which allows one to easily change the models used for embedding images. Timm is used to embedd all images in the directory. The embeddings are flattened via [UMAP](https://umap-learn.readthedocs.io/en/latest/) and clusters are identified with [HDBScan](https://hdbscan.readthedocs.io/en/latest/how_hdbscan_works.html).
+
+The DocArray data is exported as a CSV file and optionally pickled. The images are saved into the static subfolder of the specified application name (a subfolder in the main directory). By default, this is ushmm_app.
+
+Once the files have been processed and the CSV file generated, the application can be run by executing:
+
+```
+bokeh serve ushmm_app --show
+```
+
+You can replace "ushmm_app" with your own application name.
+
+You should see in your browser bokeh server:
+
+![Bokeh Server](images/bokeh_server_start.jpg)
+
+# Files
+```
+project
+│   README.md
+│   demo.ipynb => Jupyter Notebook for processing directories of images
+|   Home.py => Streamlit application for running demo.ipynb
+|   results.csv => csv file with results used by bokeh server
+│
+└───ushmm_app
+│   │   main.py => main bokeh server application
+│   │   utils.py => functions for the server
+│   │
+│   └───static => subfolder that holds the images for the server
+│       │   ushmm_demo => images for the ushmm demo of the app
+│
+└───src
+    │   utils.py => functions for demo.ipynb
+```
