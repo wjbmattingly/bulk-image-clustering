@@ -162,7 +162,7 @@ scatter = p.circle(**circle_kwargs)
 
 #Layout and Title
 t = Title()
-t.text="USHMM Bokeh Server for Image Clustering"
+t.text="Image Clustering Server"
 
 ## Spinner for Node Size
 spinner = Spinner(title="Circle Size", low = 1, high=60, step=1, value=scatter.glyph.size, width=200)
