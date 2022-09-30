@@ -27,7 +27,13 @@ project
 |   Home.py => Streamlit application for running demo.ipynb
 |   results.csv => csv file with results used by bokeh server
 │
-└───ushmm_app
+└───demo_images => images for the demo
+│
+└───app_files (DO NOT DELETE)
+│   │   main.py => main bokeh server application
+│   │   utils.py => functions for the server
+│
+└───e_codices => demo application
 │   │   main.py => main bokeh server application
 │   │   utils.py => functions for the server
 │   │
