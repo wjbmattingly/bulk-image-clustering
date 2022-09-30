@@ -1,4 +1,4 @@
-# USHMM Image Clustering
+# Bulk Image Clustering
 
 # About
 This repository is built upon the work of [Vincent D. Warmerdam](https://github.com/koaning), specifically his [bulk](https://github.com/koaning/bulk) Python library.
