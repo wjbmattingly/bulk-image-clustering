@@ -210,5 +210,5 @@ controls = column(data_table,
                     only_selected,
                     clear_vals_button,
                     multi_choice)
-curdoc().title = "USHMM Image Clustering Server"
+curdoc().title = "Clustering Server"
 curdoc().add_root(row(controls_main, controls))
