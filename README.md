@@ -21,7 +21,7 @@ You can replace "demo" with your own application name. In the demo notebook, you
 
 You should see in your browser bokeh server:
 
-![Bokeh Server](images/demo_server.jpg)
+![Bokeh Server](images/demo_server.png)
 
 # Files
 ```
