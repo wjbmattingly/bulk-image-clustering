@@ -10,7 +10,7 @@ The DocArray data is exported as a CSV file and optionally pickled. The images a
 Once the files have been processed and the CSV file generated, the application can be run by executing:
 
 ```
-bokeh serve ushmm_app --show
+bokeh serve e_codices --show --args e_codices.csv
 ```
 
 You can replace "ushmm_app" with your own application name.
