@@ -19,7 +19,7 @@ You can replace "demo" with your own application name. In the demo notebook, you
 !bokeh serve demo --show --args demo.csv
 ```
 
-You should see in your browser bokeh server:
+You should see a bokeh server in your browser. If it does not load, try visiting: [http://localhost:5006/demo](http://localhost:5006/demo):
 
 ![Bokeh Server](images/demo_server.png)
 
