@@ -70,6 +70,9 @@ Reset Data will reset the entire application.
 ## Only Change Selected
 This allows you to enable or disable the labels in the MultiSelect to appear only if they are already selected in the plot.
 
+## Clear Label MultiSelect
+This will clear all labels from the MultiSelect menu. This allows the user to not have to manually delete all labels in order to visualize a small number of labels.
+
 ## MultiSelect Labels
 This allows the user to select or deselect specific labels. This will be populated dynamically based on the data selected in the plot. It will also function in reverse.
 
