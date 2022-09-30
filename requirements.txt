@@ -15,7 +15,6 @@ bleach==5.0.1
 blinker==1.5
 bokeh==2.4.3
 cachetools==5.2.0
-certifi @ file:///C:/b/abs_4f5wo627a3/croots/recipe/certifi_1663615677642/work/certifi
 cffi==1.15.1
 charset-normalizer==2.1.1
 click==8.1.3
