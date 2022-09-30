@@ -30,32 +30,17 @@ The top-left of the application houses the scatter plot. Each node in this graph
 
 ## Plot Buttons
 On the right side of the plot, the user will see 9 buttons.
-### Bokeh Link
-This is the standard bokeh icon that links to bokeh's docs
-
-### Pan
-When activated, pan allows the user to move the plot around
-
-### Lasso Select
-This allows the user to select items in the graph as a lasso
-
-### Box Zoom
-This allows you to zoom in by making a square
-
-### Box Select
-This allows the user to select images with a box
-
-### Wheel Zoom
-This allows the user to pan in and out with their mouse's wheel.
-
-### Save
-This will save the plot image only. To save the data, see below.
-
-### Reset
-This will reset the plot only. To reset the entire app, see below.
-
-### Hover
-When activated, this allows the user to hover over an image. A popup will display the image, it's name, and label.
+| Button      | Function |
+| ----------- | ----------- |
+| Bokeh Link      | This is the standard bokeh icon that links to bokeh's docs       |
+| Pan   | When activated, pan allows the user to move the plot around        |
+| Lasso Select  | This allows the user to select items in the graph as a lasso  |
+| Box Zoom   | This allows you to zoom in by making a square  |
+| Box Select  | This allows the user to select images with a box  |
+| Wheel Zoom   | This allows the user to pan in and out with their mouse's wheel.   |
+| Save   | This will save the plot image only. To save the data, see below.  |
+|  Reset | This will reset the plot only. To reset the entire app, see below.  |
+| Hover  | When activated, this allows the user to hover over an image. A popup will display the image, it's name, and label.  |
 
 ## DataTable
 
