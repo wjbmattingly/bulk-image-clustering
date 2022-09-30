@@ -44,7 +44,7 @@ On the right side of the plot, the user will see 9 buttons.
 
 ## DataTable
 
-In the top-right of the application is the DataTable. This table is dynamically populated by the images selected in the plot. This DataTable populates dynamically based on the nodes selected in the graph and the labels selected in the MultiSelect menu.
+In the top-right of the application is the DataTable. This DataTable populates dynamically based on the nodes selected in the graph and the labels selected in the MultiSelect menu.
 
 ## Save Data
 In the bottom left of the application, the user can download the data. The Filename will save as a CSV file. If "Save Images" is selected, the images will be saved in the directory as a zip file with the same name as the CSV file. Click Save to save the data.
