@@ -23,9 +23,9 @@ cd bulk-image-clustering
 conda env create -f bulk-image.yml
 ```
 
-5) Open demo.ipynb and run each cell.
+4) Open and run demo.ipynb
 
-6) Once the files have been processed and the CSV file generated, the application can be run by executing:
+5) Once the files have been processed and the CSV file generated, the application can be run by executing:
 
 ```
 bokeh serve demo --show --args demo.csv
