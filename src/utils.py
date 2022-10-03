@@ -65,7 +65,6 @@ def process_images(directory,
     else:
         print("Creating DataFrame")
     for d, coord, label in zip(da, umap_proj, hdbscan_labels):
-        
         filename = d.uri.replace("\\", "/").split("/")[-1]
         d.tags['umap_proj_x'] = coord[0]
         d.tags['umap_proj_y'] = coord[1]
