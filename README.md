@@ -7,7 +7,24 @@ The repository allows for you to leverage [DocArray](https://docarray.jina.ai/) 
 
 The DocArray data is exported as a CSV file and optionally pickled. The images are saved into the static subfolder of the specified application name (a subfolder in the main directory).
 
-Once the files have been processed and the CSV file generated, the application can be run by executing:
+# Getting Started
+
+1) Clone repository
+```
+git clone https://github.com/wjbmattingly/bulk-image-clustering
+```
+2) Change directory to bulk-images-clustering
+```
+cd bulk-image-clustering
+```
+3) Create environment and install environment yaml.
+```
+conda env create -f bulk-image.yaml
+```
+
+5) Open demo.ipynb and run each cell.
+
+6) Once the files have been processed and the CSV file generated, the application can be run by executing:
 
 ```
 bokeh serve demo --show --args demo.csv
