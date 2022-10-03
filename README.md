@@ -10,7 +10,7 @@ The DocArray data is exported as a CSV file and optionally pickled. The images a
 Once the files have been processed and the CSV file generated, the application can be run by executing:
 
 ```
-bokeh serve e_codices --show --args demo.csv
+bokeh serve demo --show --args demo.csv
 ```
 
 You can replace "demo" with your own application name. In the demo notebook, you will find this already implemented with:
