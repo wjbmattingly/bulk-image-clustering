@@ -3,7 +3,7 @@
 # About
 This repository is built upon the work of [Vincent D. Warmerdam](https://github.com/koaning), specifically his [bulk](https://github.com/koaning/bulk) Python library.
 
-The repository allows for you to leverage [DocArray](https://docarray.jina.ai/) to grab all images from a directory. DocArray wraps around [timm](https://pypi.org/project/timm/) which allows one to easily change the models used for embedding images. Timm is used to embedd all images in the directory. The embeddings are flattened via [UMAP](https://umap-learn.readthedocs.io/en/latest/) and clusters are identified with [HDBScan](https://hdbscan.readthedocs.io/en/latest/how_hdbscan_works.html). For running these tasks, see demo.ipynb.
+The repository allows for you to leverage [DocArray](https://docarray.jina.ai/) to grab all images from a directory.  Next, [timm](https://pypi.org/project/timm/) is used to embedd all DocArray images. The embeddings are flattened via [UMAP](https://umap-learn.readthedocs.io/en/latest/) and clusters are identified with [HDBScan](https://hdbscan.readthedocs.io/en/latest/how_hdbscan_works.html). For running these tasks in sequence, see demo.ipynb.
 
 The DocArray data is exported as a CSV file and optionally pickled. The images are saved into the static subfolder of the specified application name (a subfolder in the main directory).
 
@@ -19,7 +19,7 @@ You can replace "demo" with your own application name. In the demo notebook, you
 !bokeh serve demo --show --args demo.csv
 ```
 
-You should see a bokeh server in your browser. If it does not load, try visiting: [http://localhost:5006/demo](http://localhost:5006/demo):
+You should then see a bokeh server in your browser. If it does not load, try visiting: [http://localhost:5006/demo](http://localhost:5006/demo):
 
 ![Bokeh Server](images/demo_server.png)
 
