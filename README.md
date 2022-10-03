@@ -17,9 +17,10 @@ git clone https://github.com/wjbmattingly/bulk-image-clustering
 ```
 cd bulk-image-clustering
 ```
-3) Create environment and install environment yaml.
+
+3) Create environment with bulk-image.yml.
 ```
-conda env create -f bulk-image.yaml
+conda env create -f bulk-image.yml
 ```
 
 5) Open demo.ipynb and run each cell.
