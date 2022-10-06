@@ -24,9 +24,9 @@ def preproc(d: Document):
     except:
         pass
 
-def process_images(directory,
+def process_images(directories,
                    app_name,
-                   new_directory,
+                   # new_directory,
                    model_name = 'mobilenetv3_large_100',
                    csv_filename="results.csv",
                    save_csv=False,
@@ -41,7 +41,8 @@ def process_images(directory,
     shutil.copyfile("app_files/main.py", f"{app_name}/main.py")
     shutil.copyfile("app_files/utils.py", f"{app_name}/utils.py")
     print("Running Processing on Images")
-    da = DocumentArray.from_files(directory)
+    
+    da = DocumentArray.from_files(directories)
     print(f"{len(da)} Images Gathered into DocumentArray.")
     model = timm.create_model(model_name, pretrained=True, num_classes=0)
     config = resolve_data_config({}, model=model)
@@ -56,21 +57,32 @@ def process_images(directory,
     print("Identifying Clusters with HDBScan")
     hdbscan_labels = hdbscan.HDBSCAN(min_samples=5, min_cluster_size=8).fit_predict(umap_proj)
     data = []
-    if os.path.exists(new_directory):
-        pass
-    else:
-        os.makedirs(new_directory)
+    
+    
+    # new_directories = [f"./{app_name}/static/images/{directory}" for directory in directories]
     if save_files == True:
         print("Creating DataFrame and Saving Files")
     else:
         print("Creating DataFrame")
     for d, coord, label in zip(da, umap_proj, hdbscan_labels):
-        filename = d.uri.replace("\\", "/").split("/")[-1]
+        d.uri = d.uri.replace("\\", "/")
+        
+        filename = d.uri.split("/")[-1]
+        
+        static_path = f"{app_name}/static/images/{d.uri}"
+
+        new_directory = f"{static_path}".replace(filename, "")
+        # print("Static Path:", static_path)
+        # print("New Directory:", new_directory)
         d.tags['umap_proj_x'] = coord[0]
         d.tags['umap_proj_y'] = coord[1]
         d.tags["name"] = filename
-        static_save = f"{new_directory}/{filename}"
-        d.tags["static_filename"] = static_save
+
+        if os.path.exists(new_directory):
+            pass
+        else:
+            os.makedirs(new_directory)
+        d.tags["static_filename"] = static_path
         d.tags["label"] = label
         data.append({"text": d.tags["name"],
                      "x": d.tags['umap_proj_x'],
@@ -79,7 +91,7 @@ def process_images(directory,
                     "color": label})
         if save_files == True:
             img = Image.open(d.uri)
-            img.save(static_save)
+            img.save(f"{new_directory}/{filename}")
     df = pd.DataFrame(data)
     if save_csv == True:
         df.to_csv(csv_filename, index=False)
