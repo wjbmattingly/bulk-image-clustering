@@ -106,4 +106,5 @@ project
 
 # Images Used for Demo
 The demo images come from [E-Codices](https://www.e-codices.unifr.ch/en/list/one/kba/0016-1).
+
 Aarau, Aargauer Kantonsbibliothek, MsWettF 16: 1, pp. 1-140 (www.e-codices.ch)
